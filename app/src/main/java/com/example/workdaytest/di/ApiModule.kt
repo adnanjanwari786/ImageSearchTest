@@ -1,5 +1,7 @@
 package com.example.workdaytest.di
 
+import com.example.workdaytest.data.repository.ImageSearchRepository
+import com.example.workdaytest.data.repository.ImageSearchRepositoryImpl
 import com.example.workdaytest.network.ApiService
 import com.example.workdaytest.network.retrofit
 import dagger.Module
@@ -17,5 +19,9 @@ object AppModule {
     fun provideApiService(): ApiService {
         return retrofit.create(ApiService::class.java)
     }
-
+    @Provides
+    @Singleton
+    fun provideUserRepository(apiService: ApiService): ImageSearchRepository{
+        return ImageSearchRepositoryImpl(apiService)
+    }
 }

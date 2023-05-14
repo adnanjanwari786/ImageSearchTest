@@ -6,7 +6,6 @@ import kotlinx.coroutines.flow.flow
 import java.util.concurrent.Flow
 
 interface ImageSearchRepository {
-
     suspend fun getImages(query:String,mediaType:String, page:Int, pageSize: Int): kotlinx.coroutines.flow.Flow<ImageSearchResponse>
 
 
