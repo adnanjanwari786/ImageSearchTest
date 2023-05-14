@@ -15,7 +15,7 @@ interface ApiService {
             @Query("media_type") mediaType: String,
             @Query("page") page: Int,
             @Query("page_size") pageSize: Int
-        ): Response<ImageSearchResponse>
+        ): ImageSearchResponse
 
 }
 
