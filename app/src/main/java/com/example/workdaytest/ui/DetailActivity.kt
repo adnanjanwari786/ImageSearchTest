@@ -27,7 +27,6 @@ class DetailActivity : AppCompatActivity() {
             val date = findViewById<TextView>(R.id.dateTextView)
             titleTV.text = item.title
             descTv.text = item.description
-
             val inputDateString = item.date_created
             val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US)
             val outputFormat = SimpleDateFormat("dd/MM/yyyy", Locale.US)

@@ -20,23 +20,5 @@ class ImageSearchRepositoryImpl @Inject constructor(private val apiService: ApiS
         emit(apiService.searchImages(query,mediaType,page,pageSize))
     }.flowOn(Dispatchers.IO)
 
-//    override suspend fun getImages(
-//        query: String,
-//        mediaType: String,
-//        page: Int,
-//        pageSize: Int
-//    ): ApiState {
-//        return try {
-//            val response = apiService.searchImages(query,mediaType,page,pageSize)
-//            if (response.isSuccessful) {
-//                val res = response.body()
-//                ApiState.Success(res!!)
-//            } else {
-//                ApiState.Failure(Throwable(response.message()))
-//            }
-//        } catch (e: Exception) {
-//            ApiState.Failure(Throwable(e.message ?: "An error occurred"))
-//        }
-//    }
 
 }
